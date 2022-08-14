@@ -29,6 +29,7 @@ public class LineComparison {
         System.out.printf("length of second line is = %.2f \n ", length2);
 
         checkLineEquality(length1 , length2);
+        compareTwoLines(length1 , length2);
     }
 
     static void checkLineEquality(Double length1, Double length2) {
@@ -40,6 +41,22 @@ public class LineComparison {
         else
         {
             System.out.println("Length of two lines are not equal");
+        }
+    }
+
+    static void compareTwoLines(Double length1, Double length2) {
+        int x = (length1.compareTo(length2));
+        if (x > 0)
+        {
+            System.out.println("length of Line 1 is greater than line2");
+        }
+        else if (x < 0)
+        {
+            System.out.println("length of line 2 is greater than line1");
+        }
+        else
+        {
+            System.out.println("length of two lines are equal");
         }
     }
 }
